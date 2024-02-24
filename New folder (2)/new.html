@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<style>
+    /* Style for the container div */
+    .search-icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: #c31d1d;
+        border-radius: 50%;
+    }
+
+    /* Style for the search icon */
+    .search-icon-svg {
+        width: 30px;
+        fill: #efefef; /* Icon color */
+    }
+
+    /* Style for nav-link text color */
+    .nav-link {
+        color: black !important;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .title-and-image {
+        position: absolute;
+            display: flex;
+            align-items: center;
+            margin-top: 2rem; /* Adjust margin as needed */
+        }
+
+        .title {
+            font-weight: bold;
+            color: rgb(254, 23, 23);
+            font-style:italic;
+            font-size: 24px;
+            margin-right: 20px; /* Adjust margin as needed */
+        }
+
+        .image {
+
+            width: 50px; /* Adjust image width as needed */
+            height: 50px; /* Adjust image height as needed */
+            margin-left: 4rem;
+        }
+</style>
+</head>
+<body>
+    <div class="title-and-image">
+        <img src="airbbb.png" alt="Image" class="image">
+        <div class="title">airbnb</div>
+    </div>
+    <div style="margin-left: 35rem; margin-right: 25rem; padding: auto;">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div style="justify-content: center; align-items: center; display: flex;">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Stay</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Experiences</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Online Experiences</a>
+                      </li>
+                    </ul>
+                   
+                  </div>
+              </div>
+            </div>
+          </nav>
+    </div>
+
+<div style="margin-left: 18rem; margin-right: 20rem;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="border: 1px solid black; display: flex; flex-direction: column; border-radius: 5rem; box-shadow: 1rem 1rem 1rem rgba(7, 7, 7, 0.1); height: 5rem; justify-content: space-around;">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item" style="border: 2px solid black; border-top: none; border-left: none; border-bottom: none; margin: 2px 2px 2px 2px;">
+                <a class="nav-link active" aria-current="page" href="#">Where
+                    <div>Search destinations</div>
+                </a>
+              </li>
+              <li class="nav-item" style="border: 2px solid black; border-top: none; border-left: none; border-bottom: none;">
+                <a class="nav-link active" aria-current="page" href="#">Check in
+                    <div>Add dates</div>
+                </a>
+              </li>
+              <li class="nav-item" style="border: 2px solid black; border-top: none; border-left: none; border-bottom: none;">
+                <a class="nav-link active" aria-current="page" href="#">Check out
+                    <div>Add dates</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Who
+                    <div>Add guests</div>
+                </a>
+              </li>
+            </ul>
+            <ul style="margin-left: 21rem; margin-top: 1rem;">
+                <div class="search-icon-container">
+                    <!-- SVG search icon -->
+                    <svg class="search-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M10 4c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm10 16.656l-4.286-4.286c1.066-1.43 1.714-3.266 1.714-5.284 0-4.418-3.582-8-8-8s-8 3.582-8 8 3.582 8 8 8c2.018 0 3.854-.648 5.284-1.714l4.286 4.286c.378.378.894.586 1.43.586.536 0 1.052-.208 1.43-.586.812-.812.812-2.176 0-3.004zM10 18c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"/>
+                    </svg>
+                </div>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+</div>
+    
+<hr>
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active"  aria-current="page" href="#">Surfing
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Tropical
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Desgin
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Trending
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Rooms
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Trulli
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Grand pianos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Riads
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Beach
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Towers
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Historical homes
+                </a>
+              </li>
+            </ul>
+           
+          </div>
+          <div style="display: flex;">
+            <div style="border: 2px solid black; border-radius: 5rem; margin: ;" >Filter</div>
+            <br>
+            <div>Display total before taxes</div>
+          </div>
+        </div>
+      </nav>
+
+
+
+      <div style="display: flex; flex-direction: column-reverse; justify-content: space-around; margin: 2px 2px 2px 2px; padding: 2px 2px 2px 2px;">
+        <div style="display: flex; justify-content: space-around;">
+            <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: 15px;">Tambon Ko Pha-ngan, Thailand
+                    </h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary">₹1,25,723/ night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"  style="font-size: 15px;" >Paklok, Thialand 
+            </h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary">₹ 1,84,108 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body" >
+                  <h5 class="card-title">Vypin , India </h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 28,529 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tambon KO pHa-ngan, Thialand </h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 1,25,723 / night</a>
+                </div>
+              </div>
+             
+          </div>
+
+          <div style="display: flex; justify-content: space-around;">
+            <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> Tambon Ko Yao Noi, Thialand </h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 9,203 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tambon Ko Yao Noi, Thialand</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 79,143 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Ko Samui District , thialand </h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 44,671 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Ko Pha Ngan, Thialand </h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 73,576/ night</a>
+                </div>
+              </div>
+             
+          </div>
+
+          <div style="display: flex; justify-content: space-around;">
+            <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Phuket, Thialand</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 89,537 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Vadabemmeli, India</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 60,000 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Phetchaburi, Thialand </h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 79,143 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tambon Kamala, Thialand</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 3,07,492 / night</a>
+                </div>
+              </div>
+             
+          </div>
+
+          <div style="display: flex; justify-content: space-around;">
+            <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tambon Kamala, Thialand</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary">₹ 79,143 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tambon Kamala, Thialand</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 79,143 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tambon Kamala, Thialand</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 79,143 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tambon Kamala, Thialand</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 79,143 / night</a>
+                </div>
+              </div>
+             
+          </div>
+
+          <div style="display: flex; justify-content: space-around;">
+            <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tambon Kamala, Thialand</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 79,143 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tambon Kamala, Thialand</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 79,143 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tambon Kamala, Thialand</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 79,143 / night</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="amiance (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tambon Kamala, Thialand</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary"> ₹ 79,143 / night</a>
+                </div>
+              </div>
+             
+          </div>
+      </div>
+
+</body>
+</html>
